@@ -7,13 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
- <form action="Login" method="get">
+ <form action="Index" method="get">
  <table style="background-color:skyblue;margin-left:20px;margin-top:20px;">
- <tr><h3 style="color: red;">Login Page !!</h3></tr>
- Enter email:<input type="text" name="email"><br>
- Enter password:<input type="password" name="pass"><br>
- <input type="submit" name="Login" value="Login"><a href="Register.jsp">  SignUp</a><br>
- <a href="Reset.jsp"> Forget password?</a>
+ <tr><h3 style="color: red;">Index Page !!</h3></tr>
+ 
+ <a href="Login.jsp"><input type="button" name="login" value="login"></a>
+
+ <a href="Register.jsp"><input type="button" name="SignUp" value="SignUp"></a><br>
+
+ <a href="Reset.jsp"><input type="button" name="ResetPassword" value="ResetPassword"></a>
  </table>
  </form>
 </body>

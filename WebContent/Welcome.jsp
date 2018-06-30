@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<table style="background-color:green;margin-left:20px;margin-top:20px;">
+ <tr><h3 style="color: red;">Welcome To The Page !!</h3></tr>
  <% 
 if(session.getAttribute("username")==null)
 {
@@ -14,5 +16,6 @@ if(session.getAttribute("username")==null)
 }
 %>
  Welcome ${username}
+ </table>
 </body>
 </html>
