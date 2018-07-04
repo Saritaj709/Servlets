@@ -4,19 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Index</title>
 </head>
 <body>
- <form action="Index" method="get">
- <table style="background-color:skyblue;margin-left:20px;margin-top:20px;">
- <tr><h3 style="color: red;">Index Page !!</h3></tr>
+
+<center><h3>Welcome !!</h3></center></br>
  
- <a href="Login.jsp"><input type="button" name="login" value="login"></a>
+ <!-- <a href="Login.jsp"><input type="button" name="Login" value="Login"></a>
 
  <a href="Register.jsp"><input type="button" name="SignUp" value="SignUp"></a><br>
 
- <a href="Reset.jsp"><input type="button" name="ResetPassword" value="ResetPassword"></a>
- </table>
- </form>
+ <a href="Reset.jsp"><input type="button" name="ResetPassword" value="ResetPassword"></a> -->
+<form action="PreLogin" method="post"><input type="submit" value="Login"></form>
+ <form action="PreRegister" method="post"><input type="submit" value="SignUp"></form>
+<form action="PreReset" method="post">
+<input type="submit" value="ResetPassword">
+</form> 
+ <!-- <a href="Reset.jsp"><input type="button" name="ResetPassword" value="ResetPassword"></a> -->
 </body>
 </html>

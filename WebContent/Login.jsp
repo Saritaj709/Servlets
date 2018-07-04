@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
- <form action="Login" method="get">
+ <form action="LoginServlet" method="post">
  <table style="background-color:skyblue;margin-left:20px;margin-top:20px;">
- <tr><h3 style="color: red;">Login Page !!</h3></tr>
+ <tr><h3 style="color: red;"><center>Login Page !!</center></h3></tr>
  Enter email:<input type="text" name="email"><br>
  Enter password:<input type="password" name="pass"><br>
  <input type="submit" name="Login" value="Login"><a href="Register.jsp">  SignUp</a><br>

@@ -1,4 +1,4 @@
-package com.bridgelabz.login;
+package com.bridgelabz.servlets;
 
 import java.io.IOException;
 
@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class PreError
+ * Servlet implementation class PreLogin
  */
-@WebServlet("/PreError")
-public class PreError extends HttpServlet {
-	
+//@WebServlet("/PreLogin")
+public class PreLogin extends HttpServlet {
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-   RequestDispatcher dispatcher=request.getRequestDispatcher("PreError.jsp");
-      dispatcher.forward(request,response);
+	RequestDispatcher rs=request.getRequestDispatcher("Login.jsp");
+	rs.forward(request,response);
 	}
 
 }

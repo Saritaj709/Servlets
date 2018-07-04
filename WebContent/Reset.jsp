@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="Reset" method="post">
+<form action="PassWordReset" method="post">
  <table style="background-color:blue;margin-left:20px;margin-top:20px;">
  <tr><h3 style="color:violet;">Reset Password !!</h3></tr>
   Email:<input type="text" name="email"><br>
