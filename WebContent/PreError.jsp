@@ -14,8 +14,8 @@
  <p>Oops</p>
  <div style="display: flex;justify-content:center;">
  <%String email=(String)request.getSession().getAttribute("passEmail");
- out.print("Sorry!! "+email+"please register or try again");%>
- <a href='Index.jsp'></a><img src="opps.png" alt="Error in login" border="4" width="150" height="160" />
+ out.print("Sorry!! "+email+" please register or try again");%>
+ </a><img src="opps.png" alt="Error in login" border="4" width="150" height="160" />
   </table>
  </form>
  </body>

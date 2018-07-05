@@ -1,4 +1,4 @@
-package com.bridgelabz.servlets;
+package com.bridgelabz.controller;
 
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;
@@ -26,6 +26,7 @@ public class SessionListner implements HttpSessionListener {
          // TODO Auto-generated method stub
     	count++;
     	System.out.println(arg0.getSession().getId());
+    	System.out.println("Listener");
     	System.out.println("On session Created !! "+count);
     }
 
@@ -35,6 +36,7 @@ public class SessionListner implements HttpSessionListener {
     public void sessionDestroyed(HttpSessionEvent arg0)  { 
          // TODO Auto-generated method stub
     	count--;
+    	System.out.println("Listener");
     	System.out.println("On session destroyed !! ");
     }
 	

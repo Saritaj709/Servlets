@@ -9,17 +9,12 @@
 <body>
 
 <center><h3>Welcome !!</h3></center></br>
- 
- <!-- <a href="Login.jsp"><input type="button" name="Login" value="Login"></a>
 
- <a href="Register.jsp"><input type="button" name="SignUp" value="SignUp"></a><br>
-
- <a href="Reset.jsp"><input type="button" name="ResetPassword" value="ResetPassword"></a> -->
-<form action="PreLogin" method="post"><input type="submit" value="Login"></form>
- <form action="PreRegister" method="post"><input type="submit" value="SignUp"></form>
-<form action="PreReset" method="post">
-<input type="submit" value="ResetPassword">
+<form action="PreLogin" method="post"><center><input type="submit" value="Login"></center></form>
+ <form action="PreRegister" method="post"><center><input type="submit" value="SignUp"></center></form>
+<form action="PreReset" method="post"><center><input type="submit" value="ResetPassword"></center>
 </form> 
+<form action ="PrePassword" method="post"><center><input type="submit" value="ForgetPassword"></center></form>
  <!-- <a href="Reset.jsp"><input type="button" name="ResetPassword" value="ResetPassword"></a> -->
 </body>
 </html>

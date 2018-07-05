@@ -9,12 +9,13 @@
 <body>
 <form action="PassWordReset" method="post">
  <table style="background-color:blue;margin-left:20px;margin-top:20px;">
- <tr><h3 style="color:violet;">Reset Password !!</h3></tr>
-  Email:<input type="text" name="email"><br>
-  NewPassword:<input type="password" name="pass1"><br>
-  RetypePassWord:<input type="password" name="pass2">
-   <h4 style="color:indigo;">click on reset to reset the password</h4>
- <input type="submit" name="Reset" value="Reset"><a href="Register.jsp">SignUp</a> 
+ <tr><h3 style="color:violet;"><center>Reset Password !!</center></h3></tr>
+ <center>Email:<input type="text" name="email"></center>
+ <center>NewPassword:<input type="password" name="pass1"></center>
+  <center>RetypePassWord:<input type="password" name="pass2"></center><br>
+ <center><input type="submit" name="Reset" value="Reset"></center>
+<center><a href='Index.jsp'><input type="button" value="Signout" name="Signout"></center></a>
+ </table>
  </table>
  </form>
  </body>

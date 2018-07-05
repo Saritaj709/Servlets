@@ -1,4 +1,4 @@
-package com.bridgelabz.servlets;
+package com.bridgelabz.controller;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

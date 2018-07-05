@@ -1,4 +1,4 @@
-package com.bridgelabz.servlets;
+package com.bridgelabz.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,8 +18,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.bridgelabz.model.User;
-import com.bridgelabz.service.Connect;
-import com.bridgelabz.service.ServiceLogic;
+import com.bridgelabz.repository.ConnectionPool;
+import com.bridgelabz.repository.UserRepository;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 //@WebServlet("/RegisterServlet")
@@ -29,7 +29,8 @@ public class RegisterServlet extends HttpServlet {
 	PreparedStatement pst = null;
 	MysqlDataSource dataSource = null;
 	List<User> list = new LinkedList<>();
-
+    ConnectionPool connectionPool=new ConnectionPool();
+    UserRepository userRepository=new UserRepository();
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String firstname = request.getParameter("uname");
 		String lastname = request.getParameter("uname1");
@@ -49,8 +50,8 @@ public class RegisterServlet extends HttpServlet {
 		user.setMobileNo(mobileNo);
 		user.setPassword(password);
 		list.add(user);
-		dataSource=Connect.getConnection();
-		int flag = ServiceLogic.saveObject(user);
+		dataSource=connectionPool.getConnection();
+		int flag = userRepository.saveObject(user);
 		if (flag!= 0) {
 			out.print("succesfully registered");
 			out.print("<h2 align='center'>Firstname : " + firstname + "</h2>");

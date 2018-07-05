@@ -1,19 +1,17 @@
-package com.bridgelabz.servlets;
+package com.bridgelabz.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.bridgelabz.service.Connect;
+import com.bridgelabz.repository.ConnectionPool;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 /**
@@ -24,6 +22,7 @@ public class PassWordReset extends HttpServlet {
 	Connection con = null;
 	PreparedStatement pst = null;
     MysqlDataSource dataSource=null;
+    ConnectionPool connectionPool=new ConnectionPool();
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -37,7 +36,7 @@ public class PassWordReset extends HttpServlet {
 		if (newPassword.equals(retypePassword)) {
 			String query = "update login_register set password=? where email=?";
 			try {
-				dataSource=Connect.getConnection();
+				dataSource=connectionPool.getConnection();
 				con=dataSource.getConnection();
 				pst = con.prepareStatement(query);
 				pst.setString(1, newPassword);

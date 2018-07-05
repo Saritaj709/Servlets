@@ -1,10 +1,10 @@
-package com.bridgelabz.service;
+package com.bridgelabz.repository;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
-public class Connect {
+public class ConnectionPool {
 	static MysqlDataSource dataSource=null;
-	public static MysqlDataSource getConnection() {
+	public MysqlDataSource getConnection() {
 		
 		try {
 			 dataSource=new MysqlDataSource();
