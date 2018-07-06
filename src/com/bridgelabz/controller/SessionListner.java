@@ -26,7 +26,7 @@ public class SessionListner implements HttpSessionListener {
          // TODO Auto-generated method stub
     	count++;
     	System.out.println(arg0.getSession().getId());
-    	System.out.println("Listener");
+    	System.out.println("Session Listener");
     	System.out.println("On session Created !! "+count);
     }
 
@@ -36,7 +36,7 @@ public class SessionListner implements HttpSessionListener {
     public void sessionDestroyed(HttpSessionEvent arg0)  { 
          // TODO Auto-generated method stub
     	count--;
-    	System.out.println("Listener");
+    	System.out.println("Session Listener");
     	System.out.println("On session destroyed !! ");
     }
 	

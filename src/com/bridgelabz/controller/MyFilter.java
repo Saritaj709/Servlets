@@ -41,6 +41,7 @@ public class MyFilter implements Filter {
 		String password=request.getParameter("pass");
 		PrintWriter out=response.getWriter();
 		if(email.equals("")||password.equals("")) {
+			out.print("Filter is active");
 			out.print("Field values cannot be NULL ,pls enter some data");
 		}
 		else 

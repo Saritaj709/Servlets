@@ -23,6 +23,7 @@ public class MyListener implements ServletRequestListener {
      */
     public void requestDestroyed(ServletRequestEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("My Listener");
     	System.out.println("Request Destroyed "+arg0.getServletRequest().getDispatcherType().name());
     }
 
@@ -31,6 +32,7 @@ public class MyListener implements ServletRequestListener {
      */
     public void requestInitialized(ServletRequestEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("My Listener");
     	System.out.println("Request initialized "+arg0.getServletRequest().getRemoteAddr());
     }
 	

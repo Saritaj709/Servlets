@@ -84,13 +84,13 @@ public class UserRepository {
 		
 		}return user;
 	}
-	public ResultSet invalidate(String email, String password) throws SQLException {
+	public ResultSet validate(String email, String password) throws SQLException {
 		PreparedStatement pst = null;
 		ResultSet rs = null;
 		Connection con = null;
 		MysqlDataSource dataSource = null;
 		ConnectionPool connectionPool = new ConnectionPool();
-		User user = new User();
+		//User user = new User();
 
 		String query = "select * from login_register where email=? and password=?";
 		dataSource = connectionPool.getConnection();
@@ -102,7 +102,7 @@ public class UserRepository {
 		
 		if(rs.next()) {
 			
-		System.out.println("user invalidated");
+		System.out.println("user validated");
 		
 		}return rs;
 	}

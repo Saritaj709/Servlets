@@ -23,6 +23,7 @@ public class Listner_Context implements ServletContextListener {
      */
     public void contextDestroyed(ServletContextEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("Listener context");
     	System.out.println("ServletContext destroyed");
     }
 
@@ -31,6 +32,7 @@ public class Listner_Context implements ServletContextListener {
      */
     public void contextInitialized(ServletContextEvent arg0)  { 
          // TODO Auto-generated method stub
+    	System.out.println("Listenerr context");
     	System.out.println("ServletContext initialized");
     }
 	

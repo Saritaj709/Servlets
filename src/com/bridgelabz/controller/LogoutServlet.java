@@ -27,7 +27,7 @@ public class LogoutServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession(false);
-		System.out.println(session.getId());
+		System.out.println("Session id "+session.getId());
 		if (session != null) {
 			out.println("You are sussessfully logged out");
 			session.invalidate();

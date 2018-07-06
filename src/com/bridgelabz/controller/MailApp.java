@@ -24,8 +24,10 @@ public class MailApp extends HttpServlet {
 	//	PrintWriter out=response.getWriter();
 		
 		String to=request.getParameter("to");
-		String user="shenoy01apr2018@gmail.com";
-		String pass="01apr2018";
+		/*String user="shenoy01apr2018@gmail.com";
+		String pass="01apr2018";*/
+		String user="saritaj709@gmail.com";
+		String pass="omega709";
 		
 		RequestDispatcher dispatcher=request.getRequestDispatcher("PreLogin");
 		dispatcher.forward(request,response);
